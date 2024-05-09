@@ -33,5 +33,6 @@ jobs:
 
       - name: Run Karate tests
         run: |
+          cd Karate
           npm install
           npm run test Karate_Test
