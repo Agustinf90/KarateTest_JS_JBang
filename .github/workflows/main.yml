@@ -1,0 +1,37 @@
+name: Karate Tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: jbangdev/jbang-action:latest # Utiliza una imagen que ya tenga jbang instalado
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 18
+        uses: actions/setup-java@v3
+        with:
+          java-version: '18'
+          distribution: 'temurin'
+          java-package: jdk
+          check-latest: false
+          overwrite-settings: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Run Karate tests
+        run: |
+          npm install
+          npm run test Karate_Test
