@@ -37,6 +37,7 @@ jobs:
 
   postman-tests:
     name: Postman Tests
+    needs: karate-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -51,3 +52,4 @@ jobs:
           for file in *.json; do
             newman run "$file"
           done
+
