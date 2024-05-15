@@ -1,18 +1,16 @@
-name: Karate Tests
+name: Tests 
 
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
-
+      
 jobs:
-  test:
+  karate-tests:
+    name: Karate Tests
     runs-on: ubuntu-latest
     container:
-      image: jbangdev/jbang-action:latest # Utiliza una imagen que ya tenga jbang instalado
+      image: jbangdev/jbang-action:latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -36,3 +34,21 @@ jobs:
           cd Karate
           npm install
           npm run test Karate_Test
+
+  postman-tests:
+    name: Postman Tests
+    needs: karate-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Newman
+        run: npm install -g newman
+
+      - name: Run Postman collections
+        run: |
+          cd Postman
+          for file in *.json; do
+            newman run "$file"
+          done
