@@ -20,8 +20,10 @@ Scenario: Test Scenario 2
 
 Scenario: Test Scenario 3
     * def data = read('datos.json')
-    * def email = data.email
-    * def password = data.password
+    * def emailFile = 'datos.json'
+    * def passwordFile = 'datos.json'
+    * def email = karate.read('classpath:' + emailFile)?.email || karate.read('email.txt').email
+    * def password = karate.read('classpath:' + passwordFile)?.password || karate.read('password.txt').password
     Given url 'https://automationexercise.com/api/verifyLogin'
     And form field email = email
     And form field password = password
