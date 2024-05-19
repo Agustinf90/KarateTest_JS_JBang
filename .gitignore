@@ -2,3 +2,13 @@ test.js
 package.json
 package-lock.json
 node_modules
+karate.feature
+scriptPostman.js
+xlsx.js
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+.env
+/Playwright/tests-examples
+/Playwright/playwright.config.js

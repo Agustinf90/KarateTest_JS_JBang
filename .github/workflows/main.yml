@@ -29,6 +29,10 @@ jobs:
         with:
           node-version: '18'
 
+       - name: Generar datos.json
+      run: |
+        echo "{\"email\":\"${{ secrets.EMAIL }}\",\"password\":\"${{ secrets.PASSWORD }}\"}" > datos.json
+
       - name: Run Karate tests
         run: |
           cd Karate
