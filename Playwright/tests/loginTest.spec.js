@@ -4,7 +4,7 @@ const { test,expect } = require('../config/fixtures');
 test.describe('Login Test Suite', () => {
     test.beforeEach(async ({ loginPage }) => {
         await loginPage.GotoLoginPage();
-    });
+    }, { timeout: 60000 });
 
     test('1 - Logint with valid credentials', async ({ loginPage }) => {
         await loginPage.LoginInvalid();

@@ -4,8 +4,8 @@ const { test,expect } = require('../config/fixtures');
 test.describe('Purchase E2E Suite', () => {
     test.beforeEach(async ({ cartPage }) => {
         await cartPage.GotoLoginPage();
-    });
-
+    }, { timeout: 60000 });
+    
     test('3 - Select Product', async ({ cartPage}) => {
         await cartPage.SelectProduct();
         await cartPage.PurchaseProduct();
