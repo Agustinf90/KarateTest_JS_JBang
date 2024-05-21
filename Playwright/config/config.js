@@ -6,5 +6,9 @@ module.exports = {
     password: process.env.password,
     emailInvalid: process.env.emailInvalid,
     passwordInvalid: process.env.passwordInvalid,
-    url: process.env.url
+    url: process.env.url,
+    name: process.env.name,
+    emailNew: process.env.emailNew,
+    subject: process.env.subject,
+    message: process.env.message
 };

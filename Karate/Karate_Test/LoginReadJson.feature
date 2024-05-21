@@ -1,6 +1,6 @@
 Feature: Brands Test
 Scenario: Test Scenario Read Json
-    * def data = read('.datos.json')
+    * def data = read('./data/datos.json')
     * def email = data.email
     * def password = data.password
     Given url 'https://automationexercise.com/api/verifyLogin'

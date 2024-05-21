@@ -1,5 +1,5 @@
 const { expect } = require('@playwright/test');
-const config = require('../utils/config');
+const config = require('../config/config');
 
 exports.CartPage = class CartPage {
 
@@ -45,10 +45,10 @@ exports.CartPage = class CartPage {
 
     async takeScreenshotSelectProduct() {
         await this.page.waitForLoadState('load');
-        await this.page.screenshot({ path: 'Playwright/screenshots/selectProduct.png' });
+        await this.page.screenshot({ path: './Playwright/screenshots/selectProduct.png' });
     }
     async takeScreenshotEndPurchase() {
         await this.page.waitForLoadState('load');
-        await this.page.screenshot({ path: 'Playwright/screenshots/endPurchase.png' });
+        await this.page.screenshot({ path: './Playwright/screenshots/endPurchase.png' });
     }
 }

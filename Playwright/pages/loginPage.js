@@ -1,5 +1,5 @@
 const { expect } = require('@playwright/test');
-const config = require('../utils/config');
+const config = require('../config/config');
 
 exports.LoginPage = class LoginPage {
 
@@ -9,8 +9,12 @@ exports.LoginPage = class LoginPage {
         this.txtEmail = page.locator('form').filter({ hasText: 'Login' }).getByPlaceholder('Email Address')
         this.txtPassword = page.locator('form').getByPlaceholder('Password');
         this.btnSignIn = page.locator('button.btn.btn-default', { hasText: 'Login' });
+        this.txtName = page.locator('form').getByPlaceholder('Name');
+        this.txtEmailAdd = page.locator('form').filter({ hasText: 'Signup' }).getByPlaceholder('Email Address')
+        this.btnSignUp = page.locator('button.btn.btn-default', { hasText: 'Signup' });
         this.txtInvalidCred = page.getByText('Your email or password is')
         this.bntLoggedIn = page.getByRole('link', { name: ' Logout' })
+        this.loginForm = page.getByText('Enter Account Information')
     }
 
     async GotoLoginPage() {
@@ -37,8 +41,17 @@ exports.LoginPage = class LoginPage {
         await expect.soft(this.txtInvalidCred).toBeVisible();    
     }
 
+    
+    async SignUp() {
+        await this.btnToLogin.click();
+        await this.txtName.fill(config.name);
+        await this.txtEmailAdd.fill(config.emailNew);
+        await this.btnSignUp.click();
+        await expect.soft(this.loginForm).toBeVisible();    
+    }
+
     async takeScreenshot() {
         await this.page.waitForLoadState('load');
-        await this.page.screenshot({ path: 'Playwright/screenshots/after-click3.png' });
+        await this.page.screenshot({ path: './Playwright/screenshots/after-click3.png' });
     }
 }

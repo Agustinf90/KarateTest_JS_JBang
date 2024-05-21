@@ -1,4 +1,4 @@
-const { test,expect } = require('../utils/setup');
+const { test,expect } = require('../config/fixtures');
 
 
 test.describe('Purchase E2E Suite', () => {
@@ -6,14 +6,14 @@ test.describe('Purchase E2E Suite', () => {
         await cartPage.GotoLoginPage();
     });
 
-    test('Select Product', async ({ cartPage}) => {
+    test('3 - Select Product', async ({ cartPage}) => {
         await cartPage.SelectProduct();
         await cartPage.PurchaseProduct();
         await cartPage.goToLogin();
         await cartPage.takeScreenshotSelectProduct();
     });
 
-    test('Purchase E2E Suite', async ({ cartPage, loginPage }) => {
+    test('4 - Purchase E2E', async ({ cartPage, loginPage }) => {
         await cartPage.SelectProduct();
         await cartPage.PurchaseProduct();
         await cartPage.goToLogin();
