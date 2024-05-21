@@ -32,7 +32,6 @@ exports.ContactPage = class ContactPage {
     }
 
     async takeScreenShotContact() {
-        await this.page.waitForLoadState('load');
         await this.page.screenshot({ path: './Playwright/screenshots/Sendmsg.png' });
     }
 }

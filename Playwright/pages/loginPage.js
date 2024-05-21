@@ -51,7 +51,6 @@ exports.LoginPage = class LoginPage {
     }
 
     async takeScreenshot() {
-        await this.page.waitForLoadState('load');
         await this.page.screenshot({ path: './Playwright/screenshots/after-click3.png' });
     }
 }
