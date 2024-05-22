@@ -1,6 +1,6 @@
 Feature: Brands Test
 
-Scenario: Verificar que el servicio esté disponible
+Scenario: 0 - Test Scenario Get Test - Write json / csv with response
     Given url 'https://automationexercise.com/api/brandsList'
     When method GET
     Then status 200

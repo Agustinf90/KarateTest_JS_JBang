@@ -1,7 +1,7 @@
 Feature: Send JSON body in a POST request
 
-Scenario: Send a JSON body to the Facebook Graph API
-  * def data = read('./data/whatsapp.json')
+Scenario: 6 - Test Scenario Send a JSON body to the Facebook Graph API
+  * def data = read('../../data/whatsapp.json')
   * def request_url = data.url
   * def request_data = data.token
   Given url data.url

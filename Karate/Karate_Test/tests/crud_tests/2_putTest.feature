@@ -1,5 +1,5 @@
 Feature: Brands Test
-Scenario: Test Scenario Read Json
+Scenario: 2 - Test Scenario Put Test
     Given url 'https://automationexercise.com/api/updateAccount'
     And form field email = "agu@mail.com"
     And form field password = "1234"

@@ -1,6 +1,6 @@
 Feature: Brands Test
 
-Scenario: Verificar que el servicio esté disponible
+Scenario: 9 - Test Scenario - Verificar que el servicio esté disponible
     Given url 'https://automationexercise.com/api/brandsList'
     When method GET
     Then status 200

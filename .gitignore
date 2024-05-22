@@ -11,4 +11,4 @@ xlsx.js
 /playwright/.cache/
 .env
 /Playwright/tests-examples
-/Playwright/playwright.config.js
+

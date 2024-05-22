@@ -1,7 +1,7 @@
 .DS_Store
 *.tgz
 package-lock.json
-target/
+# target/
 node_modules/
 generateEnv.js
 .env
@@ -11,6 +11,13 @@ Karate_Test/karate-config.js
 karate_output1.log
 Karate_Test/data/tokens.json
 Karate_Test/data/whatsapp.json
+# Ignora todos los archivos en target
+# Karate_Test/target/*
+
+# Excepto token.json
+# !target/token.json
+# target/
+target/karate-reports*
 
 
 

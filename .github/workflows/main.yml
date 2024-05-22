@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+        
       - name: Set up JDK 18
         uses: actions/setup-java@v3
         with:
@@ -28,17 +28,30 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18'
-
-       - name: Generar datos.json
-      run: |
-        echo "{\"email\":\"${{ secrets.EMAIL }}\",\"password\":\"${{ secrets.PASSWORD }}\"}" > datos.json
-
+          
+      - name: Generar datos.json
+        run: |
+          cd Karate
+          cd Karate_Test
+          cd data
+          echo "{\"email\":\"${{ secrets.EMAIL }}\",\"password\":\"${{ secrets.PASSWORD }}\"}" > datos.json
+      - name: Generar tokens.json
+        run: |
+          cd Karate
+          cd Karate_Test
+          cd data
+          echo "{\"token\":\"${{ secrets.TOKEN2 }}\",\"public_key\":\"${{ secrets.PUBLIC_KEY }}\"}" > tokens.json
+      - name: Generar wahtsapp.json
+        run: |
+          cd Karate
+          cd Karate_Test
+          cd data
+          echo "{\"url\":\"${{ secrets.URL_WP }}\",\"token\":\"${{ secrets.TOKEN }}\"}" > whatsapp.json
       - name: Run Karate tests
         run: |
           cd Karate
           npm install
           npm run test Karate_Test
-
   postman-tests:
     name: Postman Tests
     needs: karate-tests
@@ -56,3 +69,37 @@ jobs:
           for file in *.json; do
             newman run "$file"
           done
+  playwright-tests:
+    name: Playwright Tests
+    needs: [karate-tests, postman-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create .env file
+        run: |
+          echo "email=${{ secrets.EMAIL }}" > .env
+          echo "password=${{ secrets.PASSWORD }}" >> .env
+          echo "emailInvalid=${{ secrets.EMAIL_INVALID }}" >> .env
+          echo "passwordInvalid=${{ secrets.PASSWORD_INVALID }}" >> .env
+          echo "url=${{ secrets.URL }}" >> .env
+          echo "name=${{ secrets.NAME }}" >> .env
+          echo "emailNew=${{ secrets.EMAILNEW }}" >> .env
+          echo "subject=${{ secrets.SUBJECT }}" >> .env
+          echo "message=${{ secrets.MESSAGE }}" >> .env
+    
+      - name: Install Playwright
+        run: npm init playwright@latest --yes -- --quiet --browser=chromium --browser=firefox --browser=webkit --lang=js --gha
+
+      - name: Install dotenv
+        run: npm install dotenv
+    
+      - name: Load environment variables
+        run: |
+          cp .env Playwright/.env
+    
+      - name: Run Playwright tests
+        run: |
+          cd Playwright
+          npx playwright test tests
