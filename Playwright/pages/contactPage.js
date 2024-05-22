@@ -27,7 +27,7 @@ exports.ContactPage = class ContactPage {
         await this.inputEmail.fill(config.email);
         await this.inputSubject.fill(config.subject);
         await this.inputMsg.fill(config.message);
-        await this.inputFile.setInputFiles('./utils/selectProduct.png');
+        // await this.inputFile.setInputFiles('./utils/selectProduct.png');
         await this.sendMessage.click();
     }
 

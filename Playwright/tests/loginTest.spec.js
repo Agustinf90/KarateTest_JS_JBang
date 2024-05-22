@@ -6,12 +6,12 @@ test.describe('Login Test Suite', () => {
         await loginPage.GotoLoginPage();
     }, { timeout: 60000 });
 
-    test('1 - Logint with valid credentials', async ({ loginPage }) => {
+    test('1 - Login with valid credentials', async ({ loginPage }) => {
         await loginPage.LoginInvalid();
         await loginPage.takeScreenshot();
     });
 
-    test('2 - Logint with invalid credentials', async ({ loginPage }) => {
+    test('2 - Login with invalid credentials', async ({ loginPage }) => {
         await loginPage.Login();
         await loginPage.AssertLoggedIn();  
     });

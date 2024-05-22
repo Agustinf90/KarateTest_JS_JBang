@@ -8,5 +8,6 @@ Scenario: 0 - Test Scenario Receive token
   And request request_token
   When method post
   Then status 200
-  * def formattedToken = '{"token":"' + response.token + '"}'
-  * eval karate.write(formattedToken, 'token.json')
+  # # * def token = response.token
+  # * def formattedToken = '{"token":"' + token + '"}'
+  # * eval karate.write(formattedToken, 'token.json')
