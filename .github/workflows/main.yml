@@ -40,7 +40,7 @@ jobs:
           cd Karate
           cd Karate_Test
           cd data
-          echo "{\"token\":\"${{ secrets.TOKEN2 }}\",\"public_key\":\"${{ secrets.PUBLIC_KEY }}\"}" > tokens.json
+          echo "{\"token\":\"${{ secrets.TOKEN_SIRV }}\",\"public_key\":\"${{ secrets.PUBLIC_KEY }}\"}" > tokens.json
       - name: Generar wahtsapp.json
         run: |
           cd Karate
@@ -51,7 +51,7 @@ jobs:
         run: |
           cd Karate
           npm install
-          npm run test Karate_Test
+          npm run test Karate_Test/tests
   postman-tests:
     name: Postman Tests
     needs: karate-tests
@@ -102,4 +102,4 @@ jobs:
       - name: Run Playwright tests
         run: |
           cd Playwright
-          npx playwright test tests
+          npx playwright test tests --workers=12
