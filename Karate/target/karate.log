@@ -3133,3 +3133,869 @@ email=agus%40mail.com&password=agus123
 14:53:22.043 [main]  INFO  com.intuit.karate - [print] Response Time: 814 ms 
 14:53:22.060 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 10 of 10 (0 remaining) Karate_Test/tests/other_tests/9_single.feature
 14:53:22.061 [main]  DEBUG com.intuit.karate.Suite - waiting for 10 features to complete
+15:03:40.299 [main]  INFO  com.intuit.karate - Karate version: 1.3.0
+15:03:40.384 [main]  INFO  com.intuit.karate.Runner - using system property 'karate.config.dir': karate
+15:03:40.473 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1716401020472
+15:03:41.209 [main]  DEBUG com.intuit.karate - request:
+1 > GET https://automationexercise.com/api/brandsList
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:03:42.425 [main]  DEBUG com.intuit.karate - response time in milliseconds: 1214
+1 < 200
+1 < Date: Wed, 22 May 2024 18:03:41 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: PUT, GET, POST, OPTIONS, DELETE
+1 < x-powered-by: Phusion Passenger(R) 6.0.20
+1 < status: 200 OK
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4JksSCV9MU1QYF4G9AgEVC9A6vzeVHlKp3a6ou9RMDokIqbZUiaPKGhgP2XLJ%2BHmZEb4I2RrQxGsn%2BP%2B6RtlKy3ZT2njRGaoSXa%2BHHpePpiencoMqSe9PLQ3NroV3mIgHgNN2zkH4rhm"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 887eb96c7c6f1eb0-EZE
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 200, "brands": [{"id": 1, "brand": "Polo"}, {"id": 2, "brand": "H&M"}, {"id": 3, "brand": "Madame"}, {"id": 4, "brand": "Madame"}, {"id": 5, "brand": "Mast & Harbour"}, {"id": 6, "brand": "H&M"}, {"id": 7, "brand": "Madame"}, {"id": 8, "brand": "Polo"}, {"id": 11, "brand": "Babyhug"}, {"id": 12, "brand": "Babyhug"}, {"id": 13, "brand": "Allen Solly Junior"}, {"id": 14, "brand": "Kookie Kids"}, {"id": 15, "brand": "Babyhug"}, {"id": 16, "brand": "Babyhug"}, {"id": 18, "brand": "Kookie Kids"}, {"id": 19, "brand": "Allen Solly Junior"}, {"id": 20, "brand": "Kookie Kids"}, {"id": 21, "brand": "Biba"}, {"id": 22, "brand": "Biba"}, {"id": 23, "brand": "Biba"}, {"id": 24, "brand": "Allen Solly Junior"}, {"id": 28, "brand": "H&M"}, {"id": 29, "brand": "Polo"}, {"id": 30, "brand": "Polo"}, {"id": 31, "brand": "H&M"}, {"id": 33, "brand": "Polo"}, {"id": 35, "brand": "H&M"}, {"id": 37, "brand": "Polo"}, {"id": 38, "brand": "Madame"}, {"id": 39, "brand": "Biba"}, {"id": 40, "brand": "Biba"}, {"id": 41, "brand": "Madame"}, {"id": 42, "brand": "Mast & Harbour"}, {"id": 43, "brand": "Mast & Harbour"}]}
+
+15:03:42.481 [main]  INFO  com.intuit.karate - [print] {
+  "responseCode": 200,
+  "brands": [
+    {
+      "id": 1,
+      "brand": "Polo"
+    },
+    {
+      "id": 2,
+      "brand": "H&M"
+    },
+    {
+      "id": 3,
+      "brand": "Madame"
+    },
+    {
+      "id": 4,
+      "brand": "Madame"
+    },
+    {
+      "id": 5,
+      "brand": "Mast & Harbour"
+    },
+    {
+      "id": 6,
+      "brand": "H&M"
+    },
+    {
+      "id": 7,
+      "brand": "Madame"
+    },
+    {
+      "id": 8,
+      "brand": "Polo"
+    },
+    {
+      "id": 11,
+      "brand": "Babyhug"
+    },
+    {
+      "id": 12,
+      "brand": "Babyhug"
+    },
+    {
+      "id": 13,
+      "brand": "Allen Solly Junior"
+    },
+    {
+      "id": 14,
+      "brand": "Kookie Kids"
+    },
+    {
+      "id": 15,
+      "brand": "Babyhug"
+    },
+    {
+      "id": 16,
+      "brand": "Babyhug"
+    },
+    {
+      "id": 18,
+      "brand": "Kookie Kids"
+    },
+    {
+      "id": 19,
+      "brand": "Allen Solly Junior"
+    },
+    {
+      "id": 20,
+      "brand": "Kookie Kids"
+    },
+    {
+      "id": 21,
+      "brand": "Biba"
+    },
+    {
+      "id": 22,
+      "brand": "Biba"
+    },
+    {
+      "id": 23,
+      "brand": "Biba"
+    },
+    {
+      "id": 24,
+      "brand": "Allen Solly Junior"
+    },
+    {
+      "id": 28,
+      "brand": "H&M"
+    },
+    {
+      "id": 29,
+      "brand": "Polo"
+    },
+    {
+      "id": 30,
+      "brand": "Polo"
+    },
+    {
+      "id": 31,
+      "brand": "H&M"
+    },
+    {
+      "id": 33,
+      "brand": "Polo"
+    },
+    {
+      "id": 35,
+      "brand": "H&M"
+    },
+    {
+      "id": 37,
+      "brand": "Polo"
+    },
+    {
+      "id": 38,
+      "brand": "Madame"
+    },
+    {
+      "id": 39,
+      "brand": "Biba"
+    },
+    {
+      "id": 40,
+      "brand": "Biba"
+    },
+    {
+      "id": 41,
+      "brand": "Madame"
+    },
+    {
+      "id": 42,
+      "brand": "Mast & Harbour"
+    },
+    {
+      "id": 43,
+      "brand": "Mast & Harbour"
+    }
+  ]
+}
+ 
+15:03:42.500 [main]  INFO  com.intuit.karate - [print] Response Time: 1214 ms 
+15:03:42.526 [main]  DEBUG com.intuit.karate - write to file: target\responseProduct.json
+15:03:42.529 [main]  DEBUG com.intuit.karate - write to file: target\responseProduct.csv
+15:03:42.970 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 10 (0 remaining) Karate_Test/tests/crud_tests/0_getTest.feature
+15:03:43.088 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://automationexercise.com/api/createAccount?
+1 > Content-Type: application/x-www-form-urlencoded
+1 > Content-Length: 173
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+name=agu&email=agu%40mail.com&password=1234&lastname=fer&firstname=albert&address1=casa+123&country=alemania&state=berlin&city=zeiplig&zipcode=12353&mobile_number=1223525353
+
+15:03:43.914 [main]  DEBUG com.intuit.karate - response time in milliseconds: 826
+1 < 200
+1 < Date: Wed, 22 May 2024 18:03:43 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: POST, OPTIONS
+1 < x-powered-by: Phusion Passenger(R) 6.0.20
+1 < status: 200 OK
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=H9WJ3OX1KDRzPpFZ6Q7E4ennjFuzgzQyV2CVbJ5o7B72bpwdh%2FZ47LIHiChNiW7GJOYENWgPnTRBKAJmAIm4jxYVGBJHPMBHM5nUTqQKmANGxqRhnHZRpCzBvRYZ4bxfMKxI7OyjF5Qb"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 887eb975ef83c194-EZE
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 400, "message": "Email already exists!"}
+
+15:03:43.915 [main]  INFO  com.intuit.karate - [print] {
+  "responseCode": 400,
+  "message": "Email already exists!"
+}
+ 
+15:03:43.918 [main]  INFO  com.intuit.karate - [print] Response Time: 826 ms 
+15:03:43.921 [main]  INFO  com.intuit.karate - [print] Message: Email already exists! 
+15:03:43.986 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 10 (0 remaining) Karate_Test/tests/crud_tests/1_postTest.feature
+15:03:44.011 [main]  DEBUG com.intuit.karate - request:
+1 > PUT https://automationexercise.com/api/updateAccount
+1 > Content-Type: application/x-www-form-urlencoded
+1 > Content-Length: 104
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+email=agu%40mail.com&password=1234&lastname=fer22&firstname=albert22&country=fiji&state=ny&city=new+york
+
+15:03:44.807 [main]  DEBUG com.intuit.karate - response time in milliseconds: 796
+1 < 200
+1 < Date: Wed, 22 May 2024 18:03:43 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: PUT, OPTIONS
+1 < x-powered-by: Phusion Passenger(R) 6.0.20
+1 < status: 200 OK
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=oh5xr0x3THtr48msxQjwL2irxJrYoX46FrhdEs%2FB8b1JmIOn6KlcCQv4ch8lJRt6DOzmujNKmKOQP9%2FsfsvnoHLse4FYFFNi3JLOMQb1jYccr2tBg6EhNB1Byy1yvdBiyQymRytpkiBk"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 887eb97b8f5a1eaa-EZE
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 200, "message": "User updated!"}
+
+15:03:44.808 [main]  INFO  com.intuit.karate - [print] {
+  "responseCode": 200,
+  "message": "User updated!"
+}
+ 
+15:03:44.808 [main]  INFO  com.intuit.karate - [print] Response Time: 796 ms 
+15:03:44.808 [main]  INFO  com.intuit.karate - [print] Message: User updated! 
+15:03:44.810 [main]  INFO  com.intuit.karate - El usuario fue actualizado 
+15:03:44.848 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 10 (0 remaining) Karate_Test/tests/crud_tests/2_putTest.feature
+15:03:44.938 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://api.sirv.com/v2/token
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 150
+1 > Host: api.sirv.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"clientId":"MCGhAoCRbvYGRqavd4qZMRKuRAC","clientSecret":"6egmA6KTH0XamwKxmbctJ4+WWLwOnVXCp6An1\/H5d7v\/oFZTtvl4BYiTgseZHgCHWZBOzqfGCAS34BeU7LyUiQ=="}
+
+15:03:45.751 [main]  DEBUG com.intuit.karate - response time in milliseconds: 813
+1 < 200
+1 < Date: Wed, 22 May 2024 18:03:44 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 850
+1 < Connection: keep-alive
+1 < access-control-allow-origin: *
+1 < access-control-expose-headers: *
+1 < cache-control: no-cache
+1 < Server: Sirv.API
+1 < Strict-Transport-Security: max-age=31536000
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6Ik1DR2hBb0NSYnZZR1JxYXZkNHFaTVJLdVJBQyIsImNsaWVudE5hbWUiOiJ0ZXN0Iiwic2NvcGUiOlsiYWNjb3VudDpyZWFkIiwiYWNjb3VudDp3cml0ZSIsInVzZXI6cmVhZCIsInVzZXI6d3JpdGUiLCJiaWxsaW5nOnJlYWQiLCJiaWxsaW5nOndyaXRlIiwiZmlsZXM6cmVhZCIsImZpbGVzOndyaXRlIiwiZmlsZXM6Y3JlYXRlIiwiZmlsZXM6dXBsb2FkOm11bHRpcGFydCIsImZpbGVzOnNoYXJlZEJpbGxpbmciLCJ2aWRlb3MiLCJpbWFnZXMiXSwiaWF0IjoxNzE2NDAxMDI0LCJleHAiOjE3MTY0MDIyMjQsImF1ZCI6InJuNWFhMjZoeHBtaW1henFzMmdscG1qZ3lkcng4enFnIn0.90YLr9SO_S2_mwlFWH6yY6b7QBx9alKxkU_e1ShISBA",
+  "expiresIn": 1200,
+  "scope": [
+    "account:read",
+    "account:write",
+    "user:read",
+    "user:write",
+    "billing:read",
+    "billing:write",
+    "files:read",
+    "files:write",
+    "files:create",
+    "files:upload:multipart",
+    "files:sharedBilling",
+    "videos",
+    "images"
+  ]
+}
+
+15:03:45.754 [main]  DEBUG com.intuit.karate - write to file: target\token.json
+15:03:45.783 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 4 of 10 (0 remaining) Karate_Test/tests/crud_tests/4_receiveToken.feature
+15:03:45.794 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://api.sirv.com/v2/files/upload?filename=%2Fnotice3.png
+1 > Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6Ik1DR2hBb0NSYnZZR1JxYXZkNHFaTVJLdVJBQyIsImNsaWVudE5hbWUiOiJ0ZXN0Iiwic2NvcGUiOlsiYWNjb3VudDpyZWFkIiwiYWNjb3VudDp3cml0ZSIsInVzZXI6cmVhZCIsInVzZXI6d3JpdGUiLCJiaWxsaW5nOnJlYWQiLCJiaWxsaW5nOndyaXRlIiwiZmlsZXM6cmVhZCIsImZpbGVzOndyaXRlIiwiZmlsZXM6Y3JlYXRlIiwiZmlsZXM6dXBsb2FkOm11bHRpcGFydCIsImZpbGVzOnNoYXJlZEJpbGxpbmciLCJ2aWRlb3MiLCJpbWFnZXMiXSwiaWF0IjoxNzE2NDAxMDI0LCJleHAiOjE3MTY0MDIyMjQsImF1ZCI6InJuNWFhMjZoeHBtaW1henFzMmdscG1qZ3lkcng4enFnIn0.90YLr9SO_S2_mwlFWH6yY6b7QBx9alKxkU_e1ShISBA
+1 > Content-Type: image/png; charset=UTF-8
+1 > Content-Length: 38256
+1 > Host: api.sirv.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:03:47.122 [main]  DEBUG com.intuit.karate - response time in milliseconds: 1327
+1 < 200
+1 < Date: Wed, 22 May 2024 18:03:45 GMT
+1 < Content-Length: 0
+1 < Connection: keep-alive
+1 < X-Global-RateLimit-Limit: 7000
+1 < X-Global-RateLimit-Remaining: 6991
+1 < X-Global-RateLimit-Reset: 1716403490
+1 < X-RateLimit-Limit: 2000
+1 < X-RateLimit-Remaining: 1995
+1 < X-RateLimit-Reset: 1716403490
+1 < X-RateLimit-Type: rest:post:files:upload
+1 < access-control-allow-origin: *
+1 < access-control-expose-headers: *
+1 < cache-control: no-cache
+1 < Server: Sirv.API
+1 < Strict-Transport-Security: max-age=31536000
+
+
+15:03:47.122 [main]  INFO  com.intuit.karate - [print]  
+15:03:47.130 [main]  DEBUG c.i.karate.http.MultiPartBuilder - multipart: content-disposition: form-data; name="UPLOADCARE_PUB_KEY"; filename=""
+content-type: text/plain; charset=UTF-8
+content-length: 20
+Completed: true
+IsInMemory: true
+15:03:47.133 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://upload.uploadcare.com/base/
+1 > Content-Type: multipart/form-data; boundary=2314d784f1502dc3
+1 > Content-Length: 41567
+1 > Host: upload.uploadcare.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+Mixed: content-disposition: form-data; name="myFile"; filename="notice4.png"
+content-type: image/png; charset=UTF-8
+content-length: 41203
+Completed: true
+IsInMemory: false
+RealFile: C:\Users\agust\OneDrive\Documentos\Karate1\Karate\Karate_Test\tests\crud_tests\..\..\utils\notice4.png DeleteAfter: true
+
+content-disposition: form-data; name="UPLOADCARE_PUB_KEY"; filename=""
+content-type: text/plain; charset=UTF-8
+content-length: 20
+Completed: true
+IsInMemory: true
+
+
+15:03:47.984 [main]  DEBUG com.intuit.karate - response time in milliseconds: 851
+1 < 200
+1 < Date: Wed, 22 May 2024 18:03:47 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < Vary: Accept-Encoding
+1 < Vary: Origin
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: POST, OPTIONS
+1 < Access-Control-Allow-Headers: DNT, X-UC-User-Agent, X-PINGOTHER
+1 < Access-Control-Max-Age: 1
+1 < Access-Control-Allow-Credentials: true
+1 < Access-Control-Expose-Headers: Warning, Retry-After
+1 < X-XSS-Protection: 1; mode=block
+1 < X-Content-Type-Options: nosniff
+1 < X-Uploadcare-Request-Id: d2a58f08-5551-41a4-b18b-c5150caecae6
+{"myFile":"85e83519-968d-4093-af67-2cf5ae3c88c3"}
+
+15:03:47.985 [main]  INFO  com.intuit.karate - [print] {
+  "myFile": "85e83519-968d-4093-af67-2cf5ae3c88c3"
+}
+ 
+15:03:48.027 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 5 of 10 (0 remaining) Karate_Test/tests/crud_tests/5_uploadFile.feature
+15:03:48.047 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://api.sirv.com/v2/files/search
+1 > Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6Ik1DR2hBb0NSYnZZR1JxYXZkNHFaTVJLdVJBQyIsImNsaWVudE5hbWUiOiJ0ZXN0Iiwic2NvcGUiOlsiYWNjb3VudDpyZWFkIiwiYWNjb3VudDp3cml0ZSIsInVzZXI6cmVhZCIsInVzZXI6d3JpdGUiLCJiaWxsaW5nOnJlYWQiLCJiaWxsaW5nOndyaXRlIiwiZmlsZXM6cmVhZCIsImZpbGVzOndyaXRlIiwiZmlsZXM6Y3JlYXRlIiwiZmlsZXM6dXBsb2FkOm11bHRpcGFydCIsImZpbGVzOnNoYXJlZEJpbGxpbmciLCJ2aWRlb3MiLCJpbWFnZXMiXSwiaWF0IjoxNzE2NDAxMDI0LCJleHAiOjE3MTY0MDIyMjQsImF1ZCI6InJuNWFhMjZoeHBtaW1henFzMmdscG1qZ3lkcng4enFnIn0.90YLr9SO_S2_mwlFWH6yY6b7QBx9alKxkU_e1ShISBA
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 125
+1 > Host: api.sirv.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"query":"extension:.png AND mtime:[now-30d TO now] AND -dirname:\\\/.Trash","sort":{"filename.raw":"asc"},"from":0,"size":5}
+
+15:03:49.468 [main]  DEBUG com.intuit.karate - response time in milliseconds: 1419
+1 < 200
+1 < Date: Wed, 22 May 2024 18:03:48 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Global-RateLimit-Limit: 7000
+1 < X-Global-RateLimit-Remaining: 6990
+1 < X-Global-RateLimit-Reset: 1716403490
+1 < X-RateLimit-Limit: 1000
+1 < X-RateLimit-Remaining: 995
+1 < X-RateLimit-Reset: 1716403889
+1 < X-RateLimit-Type: rest:post:files:search
+1 < access-control-allow-origin: *
+1 < access-control-expose-headers: *
+1 < cache-control: no-cache
+1 < vary: accept-encoding
+1 < Server: Sirv.API
+1 < Strict-Transport-Security: max-age=31536000
+{
+  "hits": [
+    {
+      "_index": "sirvfs-v4",
+      "_type": "_doc",
+      "_id": "31cf1d86792e7eddd090a34e8ed4819d8465c982",
+      "_score": null,
+      "_routing": "rn5aa26hxpmimazqs2glpmjgydrx8zqg",
+      "_source": {
+        "accountId": "rn5aa26hxpmimazqs2glpmjgydrx8zqg",
+        "filename": "/Images/watermark-logo.png",
+        "dirname": "/Images",
+        "basename": "watermark-logo.png",
+        "extension": ".png",
+        "id": "Q4NULdsIDABrxn0jVYGxr28jJlV1HVfX",
+        "ctime": "2024-05-17T02:41:55.192Z",
+        "mtime": "2024-05-17T02:41:55.204Z",
+        "size": 14421,
+        "contentType": "image/png",
+        "meta": {
+          "width": 500,
+          "height": 249,
+          "format": "PNG",
+          "duration": 0
+        }
+      },
+      "sort": [
+        "/Images/watermark-logo.png"
+      ]
+    },
+    {
+      "_index": "sirvfs-v4",
+      "_type": "_doc",
+      "_id": "fc86276be8aefb4880f39ba09a004fe88cbe5818",
+      "_score": null,
+      "_routing": "rn5aa26hxpmimazqs2glpmjgydrx8zqg",
+      "_source": {
+        "accountId": "rn5aa26hxpmimazqs2glpmjgydrx8zqg",
+        "filename": "/notice3.png",
+        "dirname": "/",
+        "basename": "notice3.png",
+        "extension": ".png",
+        "id": "SQpuoxMLc1VkYMl4dn1e1XFCLUXBmRMn",
+        "ctime": "2024-05-22T16:16:40.000Z",
+        "mtime": "2024-05-22T17:53:14.787Z",
+        "size": 38256,
+        "contentType": "image/png",
+        "meta": {
+          "width": 1607,
+          "height": 698,
+          "format": "PNG",
+          "duration": 0,
+          "history": [
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            }
+          ]
+        }
+      },
+      "sort": [
+        "/notice3.png"
+      ]
+    }
+  ],
+  "total": 2,
+  "_relation": "eq"
+}
+
+15:03:49.468 [main]  INFO  com.intuit.karate - [print] {
+  "hits": [
+    {
+      "_index": "sirvfs-v4",
+      "_type": "_doc",
+      "_id": "31cf1d86792e7eddd090a34e8ed4819d8465c982",
+      "_score": null,
+      "_routing": "rn5aa26hxpmimazqs2glpmjgydrx8zqg",
+      "_source": {
+        "accountId": "rn5aa26hxpmimazqs2glpmjgydrx8zqg",
+        "filename": "/Images/watermark-logo.png",
+        "dirname": "/Images",
+        "basename": "watermark-logo.png",
+        "extension": ".png",
+        "id": "Q4NULdsIDABrxn0jVYGxr28jJlV1HVfX",
+        "ctime": "2024-05-17T02:41:55.192Z",
+        "mtime": "2024-05-17T02:41:55.204Z",
+        "size": 14421,
+        "contentType": "image/png",
+        "meta": {
+          "width": 500,
+          "height": 249,
+          "format": "PNG",
+          "duration": 0
+        }
+      },
+      "sort": [
+        "/Images/watermark-logo.png"
+      ]
+    },
+    {
+      "_index": "sirvfs-v4",
+      "_type": "_doc",
+      "_id": "fc86276be8aefb4880f39ba09a004fe88cbe5818",
+      "_score": null,
+      "_routing": "rn5aa26hxpmimazqs2glpmjgydrx8zqg",
+      "_source": {
+        "accountId": "rn5aa26hxpmimazqs2glpmjgydrx8zqg",
+        "filename": "/notice3.png",
+        "dirname": "/",
+        "basename": "notice3.png",
+        "extension": ".png",
+        "id": "SQpuoxMLc1VkYMl4dn1e1XFCLUXBmRMn",
+        "ctime": "2024-05-22T16:16:40.000Z",
+        "mtime": "2024-05-22T17:53:14.787Z",
+        "size": 38256,
+        "contentType": "image/png",
+        "meta": {
+          "width": 1607,
+          "height": 698,
+          "format": "PNG",
+          "duration": 0,
+          "history": [
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            },
+            {
+              "userId": "rest:MCGhAoCRbvYGRqavd4qZMRKuRAC",
+              "op": "create"
+            }
+          ]
+        }
+      },
+      "sort": [
+        "/notice3.png"
+      ]
+    }
+  ],
+  "total": 2,
+  "_relation": "eq"
+}
+ 
+15:03:49.489 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 6 of 10 (0 remaining) Karate_Test/tests/crud_tests/6_searchFile.feature
+15:03:49.494 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://graph.facebook.com/v19.0/299162496616685/messages
+1 > Authorization: Bearer EAAUzT6U32TcBOZBhmuPCK9rwSZCGQOltGHOZC9txRIbakz0WpBIV2Fx1w4cdiuJVAouc8jP2jcZAXXKKN38s9WgTzeBXj0eXYDX8rXR7mZBxeks1T9hnmotVKTwFWrkmEFyBGTq4Mwe7tZCwFfj5AADqwd69BZApYZA6X2Cq8cFPcpLnTreQVhoJJNIcZCFuyBpZAJ
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 130
+1 > Host: graph.facebook.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"messaging_product":"whatsapp","to":"54111540843674","type":"template","template":{"name":"utility","language":{"code":"es_AR"}}}
+
+15:03:50.741 [main]  DEBUG com.intuit.karate - response time in milliseconds: 1246
+1 < 200
+1 < Content-Type: text/javascript; charset=UTF-8
+1 < Vary: Origin
+1 < x-business-use-case-usage: {"312598708600212":[{"type":"whatsapp","call_count":1,"total_cputime":1,"total_time":1,"estimated_time_to_regain_access":0}]}
+1 < Access-Control-Allow-Origin: *
+1 < facebook-api-version: v19.0
+1 < Strict-Transport-Security: max-age=15552000; preload
+1 < Pragma: no-cache
+1 < Cache-Control: private, no-cache, no-store, must-revalidate
+1 < Expires: Sat, 01 Jan 2000 00:00:00 GMT
+1 < x-fb-request-id: ACWTxtOVg4D-cY1bQvSs6-V
+1 < x-fb-trace-id: HvXy1Jr/Z7Z
+1 < x-fb-rev: 1013686293
+1 < X-FB-Debug: FGTQH7msgRaJTcSE4R5gZGTHIfVLLdKSQinj9wFAgC26CUHQtCsV16QUOA2yLfkHu1GOPUHpdfFlwEtteFBbRA==
+1 < Date: Wed, 22 May 2024 18:03:49 GMT
+1 < X-FB-Connection-Quality: EXCELLENT; q=0.9, rtt=26, rtx=0, c=10, mss=1392, tbw=3437, tp=-1, tpl=-1, uplat=1114, ullat=0
+1 < Alt-Svc: h3=":443"; ma=86400
+1 < Connection: keep-alive
+1 < Content-Length: 209
+{"messaging_product":"whatsapp","contacts":[{"input":"54111540843674","wa_id":"5491140843674"}],"messages":[{"id":"wamid.HBgNNTQ5MTE0MDg0MzY3NBUCABEYEkRFMzUyMjI0OTZBOTQ2MzU0NAA=","message_status":"accepted"}]}
+
+15:03:50.742 [main]  INFO  com.intuit.karate - [print] {
+  "messaging_product": "whatsapp",
+  "contacts": [
+    {
+      "input": "54111540843674",
+      "wa_id": "5491140843674"
+    }
+  ],
+  "messages": [
+    {
+      "id": "wamid.HBgNNTQ5MTE0MDg0MzY3NBUCABEYEkRFMzUyMjI0OTZBOTQ2MzU0NAA=",
+      "message_status": "accepted"
+    }
+  ]
+}
+ 
+15:03:50.824 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 7 of 10 (0 remaining) Karate_Test/tests/other_tests/6_bodyJson.feature
+15:03:50.829 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://automationexercise.com/api/verifyLogin
+1 > Content-Type: application/x-www-form-urlencoded
+1 > Content-Length: 38
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+email=agus%40mail.com&password=agus123
+
+15:03:53.958 [main]  DEBUG com.intuit.karate - response time in milliseconds: 3128
+1 < 200
+1 < Date: Wed, 22 May 2024 18:03:53 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: PUT, GET, POST, OPTIONS, DELETE
+1 < x-powered-by: Phusion Passenger(R) 6.0.20
+1 < status: 200 OK
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=KwtpHlAfrvXgfTe4zrG40b%2FeH4GkrJOEIxMTudCZh5F%2BnvsnZl3doblDqSJi6wGBrASxsqTeeh0GfA9HVqNtJ2dEeJWRrbUJwo8Bk%2F7Of35xk%2BkBZfDp9%2B%2B379kVJB0mNd4ur4L8oAV%2B"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 887eb9a92ad11abb-GRU
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 200, "message": "User exists!"}
+
+15:03:53.959 [main]  INFO  com.intuit.karate - [print] {
+  "responseCode": 200,
+  "message": "User exists!"
+}
+ 
+15:03:53.961 [main]  INFO  com.intuit.karate - [print] Response Time: 3128 ms 
+15:03:53.962 [main]  ERROR com.intuit.karate - Karate_Test/tests/other_tests/7_loginReadJson.feature:13
+And assert responseTime < 2000
+did not evaluate to 'true': responseTime < 2000
+Karate_Test/tests/other_tests/7_loginReadJson.feature:13
+15:03:53.983 [main]  INFO  com.intuit.karate.Suite - <<fail>> feature 8 of 10 (0 remaining) Karate_Test/tests/other_tests/7_loginReadJson.feature
+15:03:53.989 [main]  INFO  com.intuit.karate - [print] user129@example.com 
+15:03:53.989 [main]  INFO  com.intuit.karate - [print] user449 
+15:03:54.003 [main]  INFO  com.intuit.karate - Hello, John! 
+15:03:54.004 [main]  INFO  com.intuit.karate - Hello, Jane! 
+15:03:54.004 [main]  INFO  com.intuit.karate - Hello, Bob! 
+15:03:54.009 [main]  INFO  com.intuit.karate - [print] ¡Hola, mundo! 
+15:03:54.030 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 9 of 10 (0 remaining) Karate_Test/tests/other_tests/8_readJS.feature
+15:03:54.034 [main]  DEBUG com.intuit.karate - request:
+1 > GET https://automationexercise.com/api/brandsList
+1 > Host: automationexercise.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+
+
+15:03:54.873 [main]  DEBUG com.intuit.karate - response time in milliseconds: 839
+1 < 200
+1 < Date: Wed, 22 May 2024 18:03:54 GMT
+1 < Content-Type: text/html; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < vary: Accept,Cookie,Accept-Encoding
+1 < referrer-policy: same-origin
+1 < x-frame-options: DENY
+1 < x-content-type-options: nosniff
+1 < allow: PUT, GET, POST, OPTIONS, DELETE
+1 < x-powered-by: Phusion Passenger(R) 6.0.20
+1 < status: 200 OK
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=YzGXY%2BJ6PSk%2BPGEy6dgO06U7Y%2Bxk3Hligw%2BBNp0sDlLCasEcDiQjYBO8s8iyGcwa87FrmNR5ehn6s1zSoHEbLY3KyfEqr9GoFASi6gFs0jVFrEsnmE897DbJ9kpXsvYRxhpCdFGfmElb"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 887eb9ba79828bc2-EZE
+1 < alt-svc: h3=":443"; ma=86400
+{"responseCode": 200, "brands": [{"id": 1, "brand": "Polo"}, {"id": 2, "brand": "H&M"}, {"id": 3, "brand": "Madame"}, {"id": 4, "brand": "Madame"}, {"id": 5, "brand": "Mast & Harbour"}, {"id": 6, "brand": "H&M"}, {"id": 7, "brand": "Madame"}, {"id": 8, "brand": "Polo"}, {"id": 11, "brand": "Babyhug"}, {"id": 12, "brand": "Babyhug"}, {"id": 13, "brand": "Allen Solly Junior"}, {"id": 14, "brand": "Kookie Kids"}, {"id": 15, "brand": "Babyhug"}, {"id": 16, "brand": "Babyhug"}, {"id": 18, "brand": "Kookie Kids"}, {"id": 19, "brand": "Allen Solly Junior"}, {"id": 20, "brand": "Kookie Kids"}, {"id": 21, "brand": "Biba"}, {"id": 22, "brand": "Biba"}, {"id": 23, "brand": "Biba"}, {"id": 24, "brand": "Allen Solly Junior"}, {"id": 28, "brand": "H&M"}, {"id": 29, "brand": "Polo"}, {"id": 30, "brand": "Polo"}, {"id": 31, "brand": "H&M"}, {"id": 33, "brand": "Polo"}, {"id": 35, "brand": "H&M"}, {"id": 37, "brand": "Polo"}, {"id": 38, "brand": "Madame"}, {"id": 39, "brand": "Biba"}, {"id": 40, "brand": "Biba"}, {"id": 41, "brand": "Madame"}, {"id": 42, "brand": "Mast & Harbour"}, {"id": 43, "brand": "Mast & Harbour"}]}
+
+15:03:54.874 [main]  INFO  com.intuit.karate - [print] {
+  "responseCode": 200,
+  "brands": [
+    {
+      "id": 1,
+      "brand": "Polo"
+    },
+    {
+      "id": 2,
+      "brand": "H&M"
+    },
+    {
+      "id": 3,
+      "brand": "Madame"
+    },
+    {
+      "id": 4,
+      "brand": "Madame"
+    },
+    {
+      "id": 5,
+      "brand": "Mast & Harbour"
+    },
+    {
+      "id": 6,
+      "brand": "H&M"
+    },
+    {
+      "id": 7,
+      "brand": "Madame"
+    },
+    {
+      "id": 8,
+      "brand": "Polo"
+    },
+    {
+      "id": 11,
+      "brand": "Babyhug"
+    },
+    {
+      "id": 12,
+      "brand": "Babyhug"
+    },
+    {
+      "id": 13,
+      "brand": "Allen Solly Junior"
+    },
+    {
+      "id": 14,
+      "brand": "Kookie Kids"
+    },
+    {
+      "id": 15,
+      "brand": "Babyhug"
+    },
+    {
+      "id": 16,
+      "brand": "Babyhug"
+    },
+    {
+      "id": 18,
+      "brand": "Kookie Kids"
+    },
+    {
+      "id": 19,
+      "brand": "Allen Solly Junior"
+    },
+    {
+      "id": 20,
+      "brand": "Kookie Kids"
+    },
+    {
+      "id": 21,
+      "brand": "Biba"
+    },
+    {
+      "id": 22,
+      "brand": "Biba"
+    },
+    {
+      "id": 23,
+      "brand": "Biba"
+    },
+    {
+      "id": 24,
+      "brand": "Allen Solly Junior"
+    },
+    {
+      "id": 28,
+      "brand": "H&M"
+    },
+    {
+      "id": 29,
+      "brand": "Polo"
+    },
+    {
+      "id": 30,
+      "brand": "Polo"
+    },
+    {
+      "id": 31,
+      "brand": "H&M"
+    },
+    {
+      "id": 33,
+      "brand": "Polo"
+    },
+    {
+      "id": 35,
+      "brand": "H&M"
+    },
+    {
+      "id": 37,
+      "brand": "Polo"
+    },
+    {
+      "id": 38,
+      "brand": "Madame"
+    },
+    {
+      "id": 39,
+      "brand": "Biba"
+    },
+    {
+      "id": 40,
+      "brand": "Biba"
+    },
+    {
+      "id": 41,
+      "brand": "Madame"
+    },
+    {
+      "id": 42,
+      "brand": "Mast & Harbour"
+    },
+    {
+      "id": 43,
+      "brand": "Mast & Harbour"
+    }
+  ]
+}
+ 
+15:03:54.875 [main]  INFO  com.intuit.karate - [print] Response Time: 839 ms 
+15:03:54.935 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 10 of 10 (0 remaining) Karate_Test/tests/other_tests/9_single.feature
+15:03:54.936 [main]  DEBUG com.intuit.karate.Suite - waiting for 10 features to complete
