@@ -1,7 +1,7 @@
 
 Feature: Busqueda de archivo binario
 
-Scenario: 5 - Test Scenario Search File
+Scenario: 0 - Test Scenario Receive token
 * def data = read('../../data/sirv.json')
 * def request_token = data
   Given url 'https://api.sirv.com/v2/token'

@@ -1,5 +1,5 @@
 Feature: Brands Test
-Scenario: Test Scenario Read Json
+Scenario: 4 - Test Scenario Get Test 
     Given url 'https://automationexercise.com/api/deleteAccount'
     And form field email = "agu@mail.com"
     And form field password = "1234"

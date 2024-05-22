@@ -1,5 +1,5 @@
 Feature: Brands Test
-Scenario: 1 - Test Scenario Post Test
+Scenario: 2 - Test Scenario Post Test
     Given url 'https://automationexercise.com/api/createAccount?'
     And form field name = "agu"
     And form field email = "agu@mail.com"

@@ -3999,3 +3999,52 @@ Karate_Test/tests/other_tests/7_loginReadJson.feature:13
 15:03:54.875 [main]  INFO  com.intuit.karate - [print] Response Time: 839 ms 
 15:03:54.935 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 10 of 10 (0 remaining) Karate_Test/tests/other_tests/9_single.feature
 15:03:54.936 [main]  DEBUG com.intuit.karate.Suite - waiting for 10 features to complete
+15:53:21.136 [main]  INFO  com.intuit.karate - Karate version: 1.3.0
+15:53:21.212 [main]  INFO  com.intuit.karate.Runner - using system property 'karate.config.dir': karate
+15:53:21.236 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1716404001235
+15:54:18.688 [main]  INFO  com.intuit.karate - Karate version: 1.3.0
+15:54:18.762 [main]  INFO  com.intuit.karate.Runner - using system property 'karate.config.dir': karate
+15:54:18.821 [main]  INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1716404058820
+15:54:19.571 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://api.sirv.com/v2/token
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 150
+1 > Host: api.sirv.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"clientId":"MCGhAoCRbvYGRqavd4qZMRKuRAC","clientSecret":"6egmA6KTH0XamwKxmbctJ4+WWLwOnVXCp6An1\/H5d7v\/oFZTtvl4BYiTgseZHgCHWZBOzqfGCAS34BeU7LyUiQ=="}
+
+15:54:20.610 [main]  DEBUG com.intuit.karate - response time in milliseconds: 1038
+1 < 200
+1 < Date: Wed, 22 May 2024 18:54:19 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 850
+1 < Connection: keep-alive
+1 < access-control-allow-origin: *
+1 < access-control-expose-headers: *
+1 < cache-control: no-cache
+1 < Server: Sirv.API
+1 < Strict-Transport-Security: max-age=31536000
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6Ik1DR2hBb0NSYnZZR1JxYXZkNHFaTVJLdVJBQyIsImNsaWVudE5hbWUiOiJ0ZXN0Iiwic2NvcGUiOlsiYWNjb3VudDpyZWFkIiwiYWNjb3VudDp3cml0ZSIsInVzZXI6cmVhZCIsInVzZXI6d3JpdGUiLCJiaWxsaW5nOnJlYWQiLCJiaWxsaW5nOndyaXRlIiwiZmlsZXM6cmVhZCIsImZpbGVzOndyaXRlIiwiZmlsZXM6Y3JlYXRlIiwiZmlsZXM6dXBsb2FkOm11bHRpcGFydCIsImZpbGVzOnNoYXJlZEJpbGxpbmciLCJ2aWRlb3MiLCJpbWFnZXMiXSwiaWF0IjoxNzE2NDA0MDU5LCJleHAiOjE3MTY0MDUyNTksImF1ZCI6InJuNWFhMjZoeHBtaW1henFzMmdscG1qZ3lkcng4enFnIn0.VUbFAUbXH1TUhgPr_98ou7IKuctP1eTp2J79HpfCMGc",
+  "expiresIn": 1200,
+  "scope": [
+    "account:read",
+    "account:write",
+    "user:read",
+    "user:write",
+    "billing:read",
+    "billing:write",
+    "files:read",
+    "files:write",
+    "files:create",
+    "files:upload:multipart",
+    "files:sharedBilling",
+    "videos",
+    "images"
+  ]
+}
+
+15:54:20.629 [main]  DEBUG com.intuit.karate - write to file: target\token.json
+15:54:21.074 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) Karate_Test/tests/initial_tests/0_receiveToken.feature
