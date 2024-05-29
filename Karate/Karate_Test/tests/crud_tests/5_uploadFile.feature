@@ -1,6 +1,6 @@
 Feature: Leer y imprimir un archivo binario
 
-Scenario: 5.1 - Test Scenario File upload API - Binary Encoding Content
+Scenario: 5.1 -Test Scenario File upload API - Binary Encoding Content
 * def data = read('../../data/tokens.json')
 * def request_token = data.token
   Given url 'https://api.sirv.com/v2/files/upload'
