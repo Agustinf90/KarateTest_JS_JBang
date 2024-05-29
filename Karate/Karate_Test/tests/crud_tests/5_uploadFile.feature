@@ -12,6 +12,7 @@ Scenario: 5.1 - Test Scenario File upload API - Binary Encoding Content
   Then status 200
   * print response
 
+  
 Scenario: 5.2 - Test ScenarioFile upload API - Multipart
 * def data = read('../../data/tokens.json')
 * def request_key = data.public_key
