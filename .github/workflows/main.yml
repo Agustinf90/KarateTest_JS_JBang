@@ -41,12 +41,12 @@ jobs:
           cd Karate_Test
           cd data
           echo "{\"token\":\"${{ secrets.TOKEN_SIRV }}\",\"public_key\":\"${{ secrets.PUBLIC_KEY }}\"}" > tokens.json
-      - name: Generar wahtsapp.json
+      - name: Generar sirv.json
         run: |
           cd Karate
           cd Karate_Test
           cd data
-          echo "{\"url\":\"${{ secrets.URL_WP }}\",\"token\":\"${{ secrets.TOKEN }}\"}" > whatsapp.json
+          echo "{\"clientId\":\"${{ secrets.CLIENTID }}\",\"clientSecret\":\"${{ secrets.CLIENTSECRET }}\"}" > sirv.json
       - name: Run Karate tests
         run: |
           cd Karate
