@@ -47,11 +47,12 @@ jobs:
           cd Karate_Test
           cd data
           echo "{\"clientId\":\"${{ secrets.CLIENT_ID }}\",\"clientSecret\":\"${{ secrets.CLIENTSECRET }}\"}" > sirv.json
-      - name: Run Karate tests
+      - name: Run Karate tests and Get with performance
         run: |
           cd Karate
           npm install
           npm run test Karate_Test/tests
+          npm run test -- Karate_Test/tests/crud_tests/1_getTest.feature -T=20
   postman-tests:
     name: Postman Tests
     needs: karate-tests
