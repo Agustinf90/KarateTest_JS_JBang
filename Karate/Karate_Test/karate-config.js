@@ -5,13 +5,5 @@ function fn() {
   if (!env) {
     env = 'dev'; // a custom 'intelligent' default
   }
-  var config = { // base config
-    env: env,
-    email: 'agus@mail.com',
-    password: 'agus123',
-    top : 'top'
-  
-  };
-
   return config;
 }
