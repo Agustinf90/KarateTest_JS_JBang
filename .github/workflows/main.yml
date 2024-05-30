@@ -46,7 +46,7 @@ jobs:
           cd Karate
           cd Karate_Test
           cd data
-          echo "{\"clientId\":\"${{ secrets.CLIENTID }}\",\"clientSecret\":\"${{ secrets.CLIENTSECRET }}\"}" > sirv.json
+          echo "{\"clientId\":\"${{ secrets.CLIENT_ID }}\",\"clientSecret\":\"${{ secrets.CLIENTSECRET }}\"}" > sirv.json
       - name: Run Karate tests
         run: |
           cd Karate
