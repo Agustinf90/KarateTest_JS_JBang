@@ -1,4 +1,4 @@
-name: Tests 
+name: Karate Project with Postman and Playwright 
 
 on:
   push:
@@ -15,36 +15,39 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '18'
           
-      - name: Generar datos.json
+      - name: Create datos.json
         run: |
           cd Karate
           cd Karate_Test
           cd data
           echo "{\"email\":\"${{ secrets.EMAIL }}\",\"password\":\"${{ secrets.PASSWORD }}\"}" > datos.json
-      - name: Generar tokens.json
+      
+      - name: Create tokens.json
         run: |
           cd Karate
           cd Karate_Test
           cd data
           echo "{\"token\":\"${{ secrets.TOKEN_SIRV }}\",\"public_key\":\"${{ secrets.PUBLIC_KEY }}\"}" > tokens.json
-      - name: Generar sirv.json
+      
+      - name: Create sirv.json
         run: |
           cd Karate
           cd Karate_Test
           cd data
           echo "{\"clientId\":\"${{ secrets.CLIENT_ID }}\",\"clientSecret\":\"${{ secrets.CLIENTSECRET }}\"}" > sirv.json
-      - name: Run Karate tests and Get with performance
+      
+      - name: Run Karate tests and Get Method test with performance
         run: |
           cd Karate
           npm install
           npm run test Karate_Test/tests
           npm run test -- Karate_Test/tests/crud_tests/1_getTest.feature -T=20
+          
   postman-tests:
     name: Postman Tests
     needs: karate-tests
@@ -62,6 +65,7 @@ jobs:
           for file in *.json; do
             newman run "$file"
           done
+          
   playwright-tests:
     name: Playwright Tests
     needs: [karate-tests, postman-tests]
